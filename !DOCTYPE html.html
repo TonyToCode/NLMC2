@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strategic Partnership Map: RSM-NLMC</title>
+  
+  <!-- Tailwind CSS через CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .lucide {
+      width: 18px;
+      height: 18px;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+  <div id="app" class="flex flex-col h-full bg-gray-100 p-4 font-sans">
+    <header class="bg-white rounded-lg shadow mb-4 p-4">
+      <h1 class="text-2xl font-bold text-center text-gray-800">Strategic Partnership Map: RSM-NLMC</h1>
+      <div class="flex justify-center mt-2 space-x-1">
+        <div class="flex items-center">
+          <div class="bg-blue-600 w-4 h-4 rounded-full mr-1"></div>
+          <span class="text-sm mr-2">RSM</span>
+        </div>
+        <div class="flex items-center">
+          <div class="bg-purple-600 w-4 h-4 rounded-full mr-1"></div>
+          <span class="text-sm">NLMC</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="flex mb-4 bg-white rounded-t-lg shadow overflow-hidden">
+      <button 
+        id="tab-overview" 
+        class="flex-1 py-2 px-4 bg-blue-600 text-white"
+        onclick="changeTab('overview')"
+      >
+        Overview
+      </button>
+      <button 
+        id="tab-opportunities" 
+        class="flex-1 py-2 px-4 bg-gray-200"
+        onclick="changeTab('opportunities')"
+      >
+        Opportunities
+      </button>
+      <button 
+        id="tab-swot" 
+        class="flex-1 py-2 px-4 bg-gray-200"
+        onclick="changeTab('swot')"
+      >
+        SWOT
+      </button>
+      <button 
+        id="tab-recommendations" 
+        class="flex-1 py-2 px-4 bg-gray-200"
+        onclick="changeTab('recommendations')"
+      >
+        Recommendations
+      </button>
+    </div>
+
+    <div class="flex-grow bg-white rounded-b-lg shadow p-4 overflow-auto">
+      <!-- OVERVIEW TAB -->
+      <div id="content-overview" class="space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded shadow">
+            <h2 class="text-xl font-bold flex items-center text-blue-800">
+              <span class="lucide mr-2" data-lucide="target"></span>
+              RSM (Russian School of Mathematics)
+            </h2>
+            <ul class="mt-2 space-y-2">
+              <li class="flex items-start">
+                <span class="lucide text-blue-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span>Comprehensive math school with proprietary methodology</span>
+              </li>
+              <li class="flex items-start">
+                <span class="lucide text-blue-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span>Focus on deep understanding, logical thinking, and competition preparation</span>
+              </li>
+              <li class="flex items-start">
+                <span class="lucide text-blue-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span>Own International Math Contest (IMC)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="lucide text-blue-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span>Programs for K-12, including summer schools and olympiad preparation</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-purple-50 border-l-4 border-purple-600 p-4 rounded shadow">
+            <h2 class="text-xl font-bold flex items-center text-purple-800">
+              <span class="lucide mr-2" data-lucide="award"></span>
+              NLMC (Noetic Learning Math Contest)
+            </h2>
+            <ul class="mt-2 space-y-2">
+              <li class="flex items-start">
+                <span class="lucide text-purple-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span>Popular math competition for grades 2-8, established in 2007</span>
+              </li>
+              <li class="flex items-start">
+                <span class="lucide text-purple-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span>Over 40,000 participants from USA and Canada</span>
+              </li>
+              <li class="flex items-start">
+                <span class="lucide text-purple-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span>20 creative problems, 45-50 minutes, wide recognition (medals for top 10%, ribbons for top 50%)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="lucide text-purple-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span class="text-red-600 font-semibold">Limitation: After-school institutions (like RSM) are ineligible for the top Team Achievement Plaque</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 border border-gray-300 p-4 rounded shadow-sm">
+          <h3 class="font-bold text-lg mb-2">NLMC Broader Offerings</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="flex items-start">
+              <span class="lucide text-purple-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+              <div>
+                <span class="font-semibold">Challenge Math Online:</span>
+                <span class="ml-1">Weekly problem-solving practice (grades 2-8) for gifted students, ~$25/term</span>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <span class="lucide text-purple-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+              <div>
+                <span class="font-semibold">LeapAhead! Summer Program:</span>
+                <span class="ml-1">Online workbook (grades 3-9), ~$25/session</span>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <span class="lucide text-purple-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+              <div>
+                <span class="font-semibold">StayAhead!:</span>
+                <span class="ml-1">Individualized daily practice (grades 2-5) for foundational skills</span>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <span class="lucide text-purple-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+              <div>
+                <span class="font-semibold">Supporting Resources:</span>
+                <span class="ml-1">YouTube videos, past tests, sample problems</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-yellow-50 border border-yellow-300 p-4 rounded shadow-sm">
+          <h3 class="font-bold text-lg mb-2">Participation Process & Costs</h3>
+          <div class="space-y-2">
+            <div class="flex items-start">
+              <span class="lucide text-yellow-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+              <div>
+                <span class="font-semibold">School Teams:</span>
+                <span class="ml-1">Up to 30 students/grade/school (min. 6 for team score). $79/team (US), $109/team (non-US); $15 late fee.</span>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <span class="lucide text-yellow-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+              <div>
+                <span class="font-semibold">Individual Participants:</span>
+                <span class="ml-1">$29/student; $15 late fee. Online only, later testing window. Ineligible for 'Team Winner' medal.</span>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <span class="lucide text-yellow-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+              <div>
+                <span class="font-semibold">After-School Institutions (e.g., RSM):</span>
+                <span class="ml-1 text-red-600">Permitted to register teams under school rules but are ineligible for the 'Team Achievement Plaque'.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border border-gray-300 p-4 rounded shadow-sm overflow-x-auto">
+          <h3 class="font-bold text-lg mb-2">NLMC Award Structure</h3>
+          <table class="min-w-full divide-y divide-gray-300">
+            <thead>
+              <tr class="bg-gray-50">
+                <th class="px-3 py-2 text-left font-medium text-gray-600">Award Name</th>
+                <th class="px-3 py-2 text-left font-medium text-gray-600">Criteria</th>
+                <th class="px-3 py-2 text-left font-medium text-gray-600">Recognition Item(s)</th>
+                <th class="px-3 py-2 text-left font-medium text-gray-600">Eligibility Notes</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr>
+                <td class="px-3 py-2 font-medium">National Honor Roll</td>
+                <td class="px-3 py-2">Top 10% Nationally (by grade)</td>
+                <td class="px-3 py-2">Medal, Digital Cert</td>
+                <td class="px-3 py-2">All participants eligible</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-3 py-2 font-medium">National Honorable Mention</td>
+                <td class="px-3 py-2">Top 50% Nationally (by grade)</td>
+                <td class="px-3 py-2">Ribbon, Digital Cert</td>
+                <td class="px-3 py-2">All participants eligible</td>
+              </tr>
+              <tr>
+                <td class="px-3 py-2 font-medium">Team Winner</td>
+                <td class="px-3 py-2">Highest scorer on a registered team (by grade)</td>
+                <td class="px-3 py-2">Medal, Digital Cert</td>
+                <td class="px-3 py-2">Must be part of a registered team</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-3 py-2 font-medium">Team Achievement Plaque</td>
+                <td class="px-3 py-2">Top 10% of Teams Nationally (by grade score)</td>
+                <td class="px-3 py-2">Plaque</td>
+                <td class="px-3 py-2 text-red-600 font-medium">Excludes after-school institution teams</td>
+              </tr>
+              <tr>
+                <td class="px-3 py-2 font-medium">Participation</td>
+                <td class="px-3 py-2">All participants</td>
+                <td class="px-3 py-2">Digital Mathlete Cert</td>
+                <td class="px-3 py-2">All participants eligible</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bg-purple-50 border-l-4 border-purple-600 p-4 rounded shadow">
+          <h3 class="font-bold text-lg mb-2">Competitive Landscape Analysis</h3>
+          <div class="space-y-3">
+            <p class="text-sm mb-2">NLMC competes with:</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div class="flex items-start">
+                <span class="lucide text-purple-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <div>
+                  <span class="font-semibold">Math Kangaroo:</span>
+                  <span class="ml-1">Grades 1-12, annual (March), 75-min MCQ. RSM prepares for/hosts.</span>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <span class="lucide text-purple-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <div>
+                  <span class="font-semibold">MOEMS:</span>
+                  <span class="ml-1">Grades 4-8, five monthly contests (Nov-Mar). RSM prepares for/hosts.</span>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <span class="lucide text-purple-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <div>
+                  <span class="font-semibold">Perennial Math:</span>
+                  <span class="ml-1">Grades 3-8, online (4 monthly tests) or tournaments.</span>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <span class="lucide text-purple-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <div>
+                  <span class="font-semibold">Continental Mathematics League (CML):</span>
+                  <span class="ml-1">Grades 2-12, multiple divisions/meets, 6 questions/30 min.</span>
+                </div>
+              </div>
+            </div>
+            <div class="bg-gray-50 p-3 rounded mt-2">
+              <p class="text-sm text-gray-700">
+                <span class="font-semibold">NLMC's differentiators:</span> Semiannual frequency, 20 problems/session format, broad recognition (top 50% Honorable Mention), creative problem style, and critically, the explicit exclusion of after-school institutions from the top Team Achievement Plaque. RSM's engagement with Math Kangaroo/MOEMS shows recognition of the K-8 competition market.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <h2 class="text-xl font-bold mb-4 text-gray-800 flex items-center">
+            <span class="lucide mr-2" data-lucide="book-open"></span>
+            Key Connection Points
+          </h2>
+          <div class="relative">
+            <div class="border-2 border-gray-300 p-4 rounded-lg bg-gray-50">
+              <div class="flex flex-wrap justify-center items-center gap-4">
+                <!-- Connection points -->
+                <div class="flex items-center justify-center p-3 bg-gradient-to-r from-blue-100 to-purple-100 rounded-lg border border-gray-300 shadow-sm text-center w-40">
+                  <div>
+                    <div class="text-sm font-semibold">Problem-Solving Philosophy</div>
+                    <div class="mt-1 flex justify-center">
+                      <div class="w-3 h-3 bg-blue-600 rounded-full mx-1"></div>
+                      <div class="w-3 h-3 bg-purple-600 rounded-full mx-1"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="flex items-center justify-center p-3 bg-gradient-to-r from-blue-100 to-purple-100 rounded-lg border border-gray-300 shadow-sm text-center w-40">
+                  <div>
+                    <div class="text-sm font-semibold">K-8 Target Audience</div>
+                    <div class="mt-1 flex justify-center">
+                      <div class="w-3 h-3 bg-blue-600 rounded-full mx-1"></div>
+                      <div class="w-3 h-3 bg-purple-600 rounded-full mx-1"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="flex items-center justify-center p-3 bg-gradient-to-r from-blue-100 to-purple-100 rounded-lg border border-gray-300 shadow-sm text-center w-40">
+                  <div>
+                    <div class="text-sm font-semibold">Competition Preparation</div>
+                    <div class="mt-1 flex justify-center">
+                      <div class="w-3 h-3 bg-blue-600 rounded-full mx-1"></div>
+                      <div class="w-3 h-3 bg-purple-600 rounded-full mx-1"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="flex items-center justify-center p-3 bg-red-100 rounded-lg border border-gray-300 shadow-sm text-center w-40">
+                  <div>
+                    <div class="text-sm font-semibold">Summer Programs</div>
+                    <div class="mt-1 flex justify-center">
+                      <div class="w-3 h-3 bg-red-500 rounded-full mx-1"></div>
+                      <div class="text-xs text-red-600">competition</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded shadow mt-4">
+          <h2 class="font-bold text-lg mb-2">Overview Summary</h2>
+          <p class="text-sm">
+            NLMC offers a well-established K-8 competition platform that aligns philosophically with RSM's educational approach, focusing on creative problem-solving. With over 40,000 participants and broad recognition structure, NLMC represents a significant market presence. RSM already engages with similar competitions (Math Kangaroo/MOEMS). The key challenge is NLMC's explicit exclusion of after-school institutions from top team recognition, creating a strategic limitation for full RSM team participation. A careful approach is needed to navigate this constraint while leveraging potential benefits.
+          </p>
+        </div>
+      </div>
+
+      <!-- OPPORTUNITIES TAB -->
+      <div id="content-opportunities" class="space-y-4 hidden">
+        <h2 class="text-xl font-bold mb-4 text-gray-800 flex items-center">
+          <span class="lucide mr-2" data-lucide="zap"></span>
+          Prioritized Collaboration Opportunities
+        </h2>
+        
+        <div class="bg-gray-50 border border-gray-300 p-4 rounded shadow-sm mb-4">
+          <h3 class="font-bold text-lg mb-2">Industry Partnership Models</h3>
+          <p class="text-sm text-gray-700 mb-3">
+            Before analyzing specific RSM-NLMC opportunities, it's important to understand common partnership models observed between mathematics enrichment providers and external competition organizers:
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="flex items-start">
+              <span class="lucide text-gray-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+              <div>
+                <span class="font-semibold">Testing Center Provision:</span>
+                <span class="ml-1">Mathnasium facilities host Math Kangaroo competitions, RSM branches serve as testing centers for Math Kangaroo, MOEMS, and even NLMC, and Kumon centers have hosted NLMC contests. This increases foot traffic, showcases facilities, and can lead to new enrollments.</span>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <span class="lucide text-gray-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+              <div>
+                <span class="font-semibold">Program Integration:</span>
+                <span class="ml-1">RSM has dedicated Math Competition Preparation (MCP) and National Math Competition Preparation (NMCP) tracks targeting specific contests. AoPS Academy courses explicitly prepare students for high-level contests like AMC, AIME, and HMMT.</span>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <span class="lucide text-gray-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+              <div>
+                <span class="font-semibold">Content Licensing:</span>
+                <span class="ml-1">AoPS makes extensive archives of past competition problems freely available online. NLMC provides registered teams with access to two sets of past tests for practice (valued at $79-$109 per team). These resources are often incorporated into enrichment curricula.</span>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <span class="lucide text-gray-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+              <div>
+                <span class="font-semibold">Direct Competition Ownership:</span>
+                <span class="ml-1">RSM operates the International Math Contest (IMC) through the RSM Foundation. Mathnasium has run its "TriMathlon" competition. Kumon sponsors local contests and internal challenges. This provides full control over format, branding, and data.</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-sm text-gray-700 mt-3">
+            The prevalence of tactical partnerships—primarily acting as testing centers or using competitions promotionally—suggests that deep, strategic alliances between independent enrichment providers and established contest organizations are not the norm. RSM's operation of its own IMC adds complexity, indicating a potential preference for controlling its own competition brand.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 gap-3">
+          <div class="border-l-4 border-gray-300 bg-white p-4 rounded shadow cursor-pointer transition-all" id="high1-section" onclick="togglePriority('high1')">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold flex items-center">
+                <span class="inline-block w-4 h-4 rounded-full bg-red-600 mr-2"></span>
+                <span class="text-gray-700">High Priority: </span>
+                <span class="ml-1">Content Licensing</span>
+              </h3>
+              <span class="lucide transform transition-transform" data-lucide="chevron-right" id="high1-chevron"></span>
+            </div>
+            
+            <div class="mt-3 pl-6 text-gray-700 hidden" id="high1-content">
+              <p class="mb-2">License NLMC/Challenge Math problems (grades 4-8) for RSM internal use as supplementary material.</p>
+              <ul class="space-y-1 list-disc pl-5 text-sm">
+                <li>High strategic alignment with RSM goals</li>
+                <li>Resource-efficient, low risk</li>
+                <li>Minimally impacted by team award constraint</li>
+                <li>Leverages NLMC's problem strength</li>
+                <li><span class="font-semibold">Industry Example:</span> AoPS has successfully licensed problems from various competitions for their curriculum and makes extensive archives publicly available</li>
+                <li><span class="font-semibold">RSM Experience:</span> RSM already utilizes content from other competitions (AMC, Math Kangaroo) in their competition preparation tracks (MCP/NMCP)</li>
+                <li><span class="font-semibold">Key Opportunity:</span> NLMC's Challenge Math Online offers weekly problem-solving practice specifically designed for gifted students in grades 2-8, focusing on strategies relevant to math competitions - content that could supplement RSM's competition preparation programs</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="border-l-4 border-gray-300 bg-white p-4 rounded shadow cursor-pointer transition-all" id="high2-section" onclick="togglePriority('high2')">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold flex items-center">
+                <span class="inline-block w-4 h-4 rounded-full bg-red-600 mr-2"></span>
+                <span class="text-gray-700">High Priority: </span>
+                <span class="ml-1">Targeted Co-Marketing</span>
+              </h3>
+              <span class="lucide transform transition-transform" data-lucide="chevron-right" id="high2-chevron"></span>
+            </div>
+            
+            <div class="mt-3 pl-6 text-gray-700 hidden" id="high2-content">
+              <p class="mb-2">Specific joint campaigns (webinars, targeted email swaps, social media).</p>
+              <ul class="space-y-1 list-disc pl-5 text-sm">
+                <li>High audience reach and lead generation</li>
+                <li>Moderate resources, manageable risks</li>
+                <li>Avoid co-promoting directly competing programs</li>
+                <li><span class="font-semibold">Industry Example:</span> Mathnasium partners with Math Kangaroo for promotional emails to competition participants</li>
+                <li><span class="font-semibold">RSM Experience:</span> RSM has successfully run co-marketing campaigns with MOEMS, generating qualified leads for their programs</li>
+                <li><span class="font-semibold">Key Opportunity:</span> NLMC's participant base exceeds 40,000 students from all 50 U.S. states and Canada, providing access to a large, relevant audience of parents and students already invested in math enrichment</li>
+                <li><span class="font-semibold">Strategic Caution:</span> Direct competition exists between RSM Summer School and NLMC's LeapAhead! summer program, requiring careful navigation in marketing campaigns</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="border-l-4 border-gray-300 bg-white p-4 rounded shadow cursor-pointer transition-all" id="medium1-section" onclick="togglePriority('medium1')">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold flex items-center">
+                <span class="inline-block w-4 h-4 rounded-full bg-yellow-500 mr-2"></span>
+                <span class="text-gray-700">Medium Priority: </span>
+                <span class="ml-1">Facilitate Individual Participation</span>
+              </h3>
+              <span class="lucide transform transition-transform" data-lucide="chevron-right" id="medium1-chevron"></span>
+            </div>
+            
+            <div class="mt-3 pl-6 text-gray-700 hidden" id="medium1-content">
+              <p class="mb-2">Inform RSM parents about NLMC individual registration option.</p>
+              <ul class="space-y-1 list-disc pl-5 text-sm">
+                <li>Low RSM cost</li>
+                <li>Supports student interest</li>
+                <li>Low risk</li>
+                <li><span class="font-semibold">Industry Example:</span> AoPS encourages student participation in various competitions via email and student portal announcements</li>
+                <li><span class="font-semibold">RSM Experience:</span> Some RSM branches already informally share information about NLMC with parents</li>
+                <li><span class="font-semibold">Participation Details:</span> Individual registration costs $29 per student (plus potential $15 late fee), involves taking the test online only during a specific window slightly later than the school team window</li>
+                <li><span class="font-semibold">Award Eligibility:</span> Individual participants are eligible for National Honor Roll (top 10%) and National Honorable Mention (top 50%) but not for the Team Winner medal</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="border-l-4 border-gray-300 bg-white p-4 rounded shadow cursor-pointer transition-all" id="medium2-section" onclick="togglePriority('medium2')">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold flex items-center">
+                <span class="inline-block w-4 h-4 rounded-full bg-yellow-500 mr-2"></span>
+                <span class="text-gray-700">Medium Priority: </span>
+                <span class="ml-1">Standardize RSM Branch Participation</span>
+              </h3>
+              <span class="lucide transform transition-transform" data-lucide="chevron-right" id="medium2-chevron"></span>
+            </div>
+            
+            <div class="mt-3 pl-6 text-gray-700 hidden" id="medium2-content">
+              <p class="mb-2">Develop internal guidelines for RSM branches hosting/registering teams.</p>
+              <ul class="space-y-1 list-disc pl-5 text-sm">
+                <li>Clarify team award ineligibility</li>
+                <li>Promote individual successes</li>
+                <li>Consistency and expectations management</li>
+                <li><span class="font-semibold">Industry Example:</span> Kumon centers follow standardized guidelines for math competition participation</li>
+                <li><span class="font-semibold">RSM Experience:</span> RSM NYC branch currently hosts MOEMS with clear internal participation guidelines</li>
+                <li><span class="font-semibold">Registration Process:</span> Teams cost $79 per team in the US ($109 for international), can include up to 30 students per grade level, and require in-person proctoring for both paper-based and online formats</li>
+                <li><span class="font-semibold">Critical Limitation:</span> RSM branches are explicitly ineligible for the Team Achievement Plaque (awarded to top 10% of teams), though students can still earn individual awards (National Honor Roll, Honorable Mention) and Team Winner medals</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="border-l-4 border-gray-300 bg-white p-4 rounded shadow cursor-pointer transition-all" id="low1-section" onclick="togglePriority('low1')">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold flex items-center">
+                <span class="inline-block w-4 h-4 rounded-full bg-blue-500 mr-2"></span>
+                <span class="text-gray-700">Low Priority: </span>
+                <span class="ml-1">Pilot Joint Events (Virtual)</span>
+              </h3>
+              <span class="lucide transform transition-transform" data-lucide="chevron-right" id="low1-chevron"></span>
+            </div>
+            
+            <div class="mt-3 pl-6 text-gray-700 hidden" id="low1-content">
+              <p class="mb-2">E.g., a workshop on "Transitioning from Classroom Math to Competition Problem-Solving."</p>
+              <ul class="space-y-1 list-disc pl-5 text-sm">
+                <li>Tests collaboration on a small scale</li>
+                <li>Evaluates engagement before deeper integration</li>
+                <li><span class="font-semibold">Industry Example:</span> Mathnasium has hosted joint webinars with Math Olympiad organizers</li>
+                <li><span class="font-semibold">RSM Experience:</span> RSM has conducted preparation workshops for AMC competitions</li>
+                <li><span class="font-semibold">Potential Format:</span> Virtual events leveraging existing platforms (high feasibility) with clear value proposition for both organizations' audiences</li>
+                <li><span class="font-semibold">Mutual Benefits:</span> NLMC gains access to RSM's highly engaged audience, while RSM offers value-added events that showcase its pedagogical approach using NLMC content</li>
+                <li><span class="font-semibold">Implementation Caution:</span> Requires careful planning to ensure mutual benefit and avoid branding conflicts, with clearly defined roles, responsibilities, and branding guidelines</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="border-l-4 border-gray-300 bg-white p-4 rounded shadow cursor-pointer transition-all" id="monitor-section" onclick="togglePriority('monitor')">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold flex items-center">
+                <span class="inline-block w-4 h-4 rounded-full bg-gray-500 mr-2"></span>
+                <span class="text-gray-700">Monitor/Avoid Initially: </span>
+                <span class="ml-1">Deeper Integration & Complex Collaborations</span>
+              </h3>
+              <span class="lucide transform transition-transform" data-lucide="chevron-right" id="monitor-chevron"></span>
+            </div>
+            
+            <div class="mt-3 pl-6 text-gray-700 hidden" id="monitor-content">
+              <p class="mb-2">Defer platform integration, co-developed programs, physical events.</p>
+              <ul class="space-y-1 list-disc pl-5 text-sm">
+                <li>High resource needs</li>
+                <li>Implementation complexity</li>
+                <li>Strategic conflicts (with IMC)</li>
+                <li>Team award constraint</li>
+                <li><span class="font-semibold">Industry Caution:</span> AoPS attempted deep integration with certain competitions, resulting in resource drain without proportional returns</li>
+                <li><span class="font-semibold">Technical Hurdles:</span> Integrated online competitions would require significant technical development and integration efforts from both sides, with NLMC's willingness to create bespoke leagues for an external partner uncertain</li>
+                <li><span class="font-semibold">Strategic Conflict:</span> RSM already operates its own International Math Contest (IMC) through the RSM Foundation, suggesting a preference for controlling its own competition brand</li>
+                <li><span class="font-semibold">Persistent Limitation:</span> The fundamental issue of RSM's ineligibility for the Team Achievement Award would likely remain even within a special league structure, limiting full brand leverage</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded shadow mt-4">
+          <h2 class="font-bold text-lg mb-2">Opportunities Summary</h2>
+          <p class="text-sm">
+            The RSM-NLMC partnership offers several viable collaboration paths, with the highest strategic value in content licensing and targeted co-marketing. Industry precedents exist for all proposed opportunities, with multiple math enrichment providers successfully implementing similar partnerships. RSM's existing experience with competitions like Math Kangaroo and MOEMS provides a foundation for implementing these opportunities. A phased approach prioritizing high-value, low-risk initiatives aligns with industry best practices and RSM's historical partnership approach.
+          </p>
+        </div>
+      </div>
+
+      <!-- SWOT TAB -->
+      <div id="content-swot" class="hidden">
+        <h2 class="text-xl font-bold mb-4 text-gray-800">SWOT Analysis: RSM-NLMC Partnership</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-lg border-2 border-green-200 bg-white shadow-sm cursor-pointer" id="strengths-section" onclick="toggleSwot('strengths')">
+            <h3 class="text-lg font-bold text-green-700 flex items-center">
+              <span class="lucide mr-2" data-lucide="check-circle"></span>
+              Strengths
+            </h3>
+            
+            <div class="mt-3 space-y-2 pl-2 hidden" id="strengths-content">
+              <div class="flex items-start">
+                <span class="lucide text-green-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span><span class="font-semibold">Access to NLMC's large audience:</span> Over 40,000 participants from USA and Canada across grades 2-8, providing substantial marketing reach for RSM's programs and services. NLMC participants have grown from 30,000 to over 40,000 in recent years, indicating increasing market acceptance.</span>
+              </div>
+              <div class="flex items-start">
+                <span class="lucide text-green-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span><span class="font-semibold">Philosophical alignment:</span> Both organizations emphasize creative problem-solving skills over rote memorization. NLMC's focus on "non-routine, engaging problems that foster creativity, critical thinking, and a deeper understanding and appreciation of mathematics" resonates with RSM's approach to "developing intellect and character through rigorous mathematics study."</span>
+              </div>
+              <div class="flex items-start">
+                <span class="lucide text-green-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span><span class="font-semibold">Positive brand reputation:</span> NLMC has established trust within the K-8 community, widely regarded as a valuable tool for developing critical thinking and problem-solving skills. Schools actively promote student results, attesting to the perceived value and prestige of NLMC recognition.</span>
+              </div>
+              <div class="flex items-start">
+                <span class="lucide text-green-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span><span class="font-semibold">Content enrichment potential:</span> NLMC's creative problem sets can enhance RSM's curriculum, particularly in grades 4-8. The "creative, non-routine problems" are explicitly designed to foster critical thinking and move beyond standard textbook exercises.</span>
+              </div>
+              <div class="flex items-start">
+                <span class="lucide text-green-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span><span class="font-semibold">Existing engagement:</span> Some RSM branches already participate in NLMC, providing a foundation for standardized approaches. Evidence suggests RSM branches have functioned as testing centers or registered teams for NLMC in the past.</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="p-4 rounded-lg border-2 border-red-200 bg-white shadow-sm cursor-pointer" id="weaknesses-section" onclick="toggleSwot('weaknesses')">
+            <h3 class="text-lg font-bold text-red-700 flex items-center">
+              <span class="lucide mr-2" data-lucide="x-circle"></span>
+              Weaknesses
+            </h3>
+            
+            <div class="mt-3 space-y-2 pl-2 hidden" id="weaknesses-content">
+              <div class="flex items-start">
+                <span class="lucide text-red-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span><span class="font-semibold">Team award exclusion:</span> NLMC explicitly prohibits after-school institutions like RSM from receiving the prestigious Team Achievement Plaque, limiting full recognition potential</span>
+              </div>
+              <div class="flex items-start">
+                <span class="lucide text-red-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span><span class="font-semibold">Brand perception risk:</span> If NLMC is viewed as less rigorous than core RSM programs, association could dilute RSM's brand positioning as a premium advanced math provider</span>
+              </div>
+              <div class="flex items-start">
+                <span class="lucide text-red-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span><span class="font-semibold">Program competition:</span> Direct overlap in summer offerings (RSM Summer School vs. NLMC LeapAhead!) creates marketing conflicts and potential customer confusion</span>
+              </div>
+              <div class="flex items-start">
+                <span class="lucide text-red-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span><span class="font-semibold">Resource requirements:</span> Partnership management necessitates allocation of staff time, coordination efforts, and potentially marketing budget</span>
+              </div>
+              <div class="flex items-start">
+                <span class="lucide text-red-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span><span class="font-semibold">Conflict with IMC:</span> RSM's own International Math Contest may face internal competition or cannibalization from NLMC promotion</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="p-4 rounded-lg border-2 border-blue-200 bg-white shadow-sm cursor-pointer" id="opportunities-section" onclick="toggleSwot('opportunities')">
+            <h3 class="text-lg font-bold text-blue-700 flex items-center">
+              <span class="lucide mr-2" data-lucide="zap"></span>
+              Opportunities
+            </h3>
+            
+            <div class="mt-3 space-y-2 pl-2 hidden" id="opportunities-content">
+              <div class="flex items-start">
+                <span class="lucide text-blue-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span><span class="font-semibold">Lead generation:</span> NLMC's participant base (over 40,000 students) provides direct access to mathematically inclined students who are prime candidates for RSM's core programs and competition tracks. These students have already demonstrated interest in mathematical challenges beyond standard school curriculum.</span>
+              </div>
+              <div class="flex items-start">
+                <span class="lucide text-blue-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span><span class="font-semibold">Brand visibility expansion:</span> Partnership allows RSM to increase awareness beyond current markets into NLMC's broader K-8 audience across USA and Canada. NLMC has participants from all 50 U.S. states, offering geographic reach that may include areas where RSM has limited presence.</span>
+              </div>
+              <div class="flex items-start">
+                <span class="lucide text-blue-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span><span class="font-semibold">Curriculum enhancement:</span> Integration of NLMC-style problems can refresh RSM materials and provide additional student engagement. NLMC's Challenge Math Online specifically focuses on developing problem-solving strategies (modeling, pattern finding, logical reasoning) relevant to competitions.</span>
+              </div>
+              <div class="flex items-start">
+                <span class="lucide text-blue-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span><span class="font-semibold">Revenue-generating joint offerings:</span> Potential for co-developed workshops, specialized prep courses, or branded materials with shared revenue streams. Innovative collaborations could include joint teacher training initiatives combining NLMC's problem-crafting expertise with RSM's pedagogical depth.</span>
+              </div>
+              <div class="flex items-start">
+                <span class="lucide text-blue-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span><span class="font-semibold">Market positioning:</span> Supporting accessible math challenges can broaden RSM's appeal beyond the elite competition segment. NLMC serves as an "accessible entry point to math competitions" and bridges the gap between standard school mathematics and more intensive competitions like MOEMS or AMC 8.</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="p-4 rounded-lg border-2 border-yellow-200 bg-white shadow-sm cursor-pointer" id="threats-section" onclick="toggleSwot('threats')">
+            <h3 class="text-lg font-bold text-yellow-700 flex items-center">
+              <span class="lucide mr-2" data-lucide="info"></span>
+              Threats
+            </h3>
+            
+            <div class="mt-3 space-y-2 pl-2 hidden" id="threats-content">
+              <div class="flex items-start">
+                <span class="lucide text-yellow-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span><span class="font-semibold">Negative ROI risk:</span> If partnership activities (time, resources, fees) don't generate measurable benefits (enrollment gains, brand lift), the investment could yield poor returns</span>
+              </div>
+              <div class="flex items-start">
+                <span class="lucide text-yellow-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span><span class="font-semibold">Brand reputation damage:</span> Poor execution or negative parent/student experiences could reflect poorly on RSM among NLMC's participant community</span>
+              </div>
+              <div class="flex items-start">
+                <span class="lucide text-yellow-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span><span class="font-semibold">Competitor strengthening:</span> Promoting NLMC could inadvertently drive participants to NLMC's other competing offerings (e.g., Challenge Math Online, LeapAhead!)</span>
+              </div>
+              <div class="flex items-start">
+                <span class="lucide text-yellow-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span><span class="font-semibold">Policy/leadership changes:</span> Future modifications to NLMC rules, ownership, or strategic direction could impact partnership viability</span>
+              </div>
+              <div class="flex items-start">
+                <span class="lucide text-yellow-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                <span><span class="font-semibold">Competitive response:</span> Other math education providers (Mathnasium, Kumon, AoPS) could develop more comprehensive NLMC partnerships, neutralizing any competitive advantage</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-gray-50 border border-gray-300 p-4 rounded shadow-sm mt-6">
+          <h3 class="font-bold text-lg mb-2">SWOT Analysis Summary</h3>
+          <p class="text-sm">
+            The RSM-NLMC partnership presents a strategic tension between significant opportunities (particularly in audience reach and content enrichment) and notable limitations (especially the team award restriction). The greatest strength lies in the philosophical alignment and complementary positioning in the K-8 math enrichment space. The most pressing weaknesses are the explicit exclusion from team recognition and potential resource allocation challenges. Key opportunities center around lead generation and curriculum enhancement, while principal threats include ROI uncertainty and potential brand conflicts. A calibrated approach that maximizes strengths while mitigating weaknesses will be essential for partnership success.
+          </p>
+        </div>
+      </div>
+
+      <!-- RECOMMENDATIONS TAB -->
+      <div id="content-recommendations" class="space-y-6 hidden">
+        <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded shadow">
+          <h2 class="text-xl font-bold mb-2 text-blue-800">Overall Recommendation</h2>
+          <p class="text-gray-700">
+            RSM should pursue a targeted, tactical partnership with NLMC, initially focusing on low-risk, high-yield collaborations (leveraging audience reach, problem content) without deep integration. This acknowledges NLMC's team award limitations and potential conflicts with RSM programs (IMC, summer school).
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-bold mb-3 text-gray-800 flex items-center">
+            <span class="lucide mr-2" data-lucide="bar-chart-4"></span>
+            Prioritized Actions
+          </h3>
+          
+          <div class="space-y-3">
+            <div class="bg-white border-l-4 border-red-600 p-3 rounded shadow-sm">
+              <div class="flex items-center">
+                <span class="inline-block w-3 h-3 rounded-full bg-red-600 mr-2"></span>
+                <h4 class="font-bold text-gray-800">High Priority</h4>
+              </div>
+              <ul class="mt-2 pl-5 space-y-2">
+                <li class="flex items-start">
+                  <span class="lucide text-red-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                  <div>
+                    <span class="font-semibold">Content Licensing & Integration:</span>
+                    <span class="ml-1">License NLMC/Challenge Math problems (grades 4-8) for RSM internal use with attribution. Significantly enhances curriculum with minimal resources.</span>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span class="lucide text-red-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                  <div>
+                    <span class="font-semibold">Targeted Co-Marketing Initiatives:</span>
+                    <span class="ml-1">Joint webinars, strategic email campaigns, and social media cross-promotion focusing on complementary offerings (avoid summer programs).</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-white border-l-4 border-yellow-500 p-3 rounded shadow-sm">
+              <div class="flex items-center">
+                <span class="inline-block w-3 h-3 rounded-full bg-yellow-500 mr-2"></span>
+                <h4 class="font-bold text-gray-800">Medium Priority</h4>
+              </div>
+              <ul class="mt-2 pl-5 space-y-2">
+                <li class="flex items-start">
+                  <span class="lucide text-yellow-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                  <div>
+                    <span class="font-semibold">Facilitate Individual Student Participation:</span>
+                    <span class="ml-1">Create clear, parent-facing materials explaining NLMC registration process, timing, and benefits. Emphasize individual awards potential.</span>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span class="lucide text-yellow-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                  <div>
+                    <span class="font-semibold">Standardize RSM Branch Participation:</span>
+                    <span class="ml-1">Develop comprehensive guidelines for branches hosting NLMC, including clear communication about team award ineligibility and best practices.</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-white border-l-4 border-blue-500 p-3 rounded shadow-sm">
+              <div class="flex items-center">
+                <span class="inline-block w-3 h-3 rounded-full bg-blue-500 mr-2"></span>
+                <h4 class="font-bold text-gray-800">Low Priority</h4>
+              </div>
+              <ul class="mt-2 pl-5 space-y-2">
+                <li class="flex items-start">
+                  <span class="lucide text-blue-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                  <div>
+                    <span class="font-semibold">Pilot Joint Events (Virtual):</span>
+                    <span class="ml-1">Design and execute 1-2 co-branded webinars targeting specific segments (e.g., parents new to competitions) to test collaboration dynamics.</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-white border-l-4 border-gray-500 p-3 rounded shadow-sm">
+              <div class="flex items-center">
+                <span class="inline-block w-3 h-3 rounded-full bg-gray-500 mr-2"></span>
+                <h4 class="font-bold text-gray-800">Monitor/Avoid Initially</h4>
+              </div>
+              <ul class="mt-2 pl-5 space-y-2">
+                <li class="flex items-start">
+                  <span class="lucide text-gray-600 mr-1 flex-shrink-0 mt-0.5" data-lucide="chevron-right"></span>
+                  <div>
+                    <span class="font-semibold">Deeper Integration & Complex Collaborations:</span>
+                    <span class="ml-1">Postpone platform integration, co-developed programs, and physical events until ROI from initial initiatives is clearly demonstrated.</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white border border-gray-300 rounded shadow-sm overflow-hidden">
+          <h3 class="text-lg font-bold p-3 bg-gray-100">Implementation Timeline</h3>
+          <div class="p-4">
+          <div class="relative pt-1">
+              <div class="flex mb-2 items-center justify-between">
+                <div>
+                  <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200">
+                    Phase 1: Content Licensing (Months 1-3)
+                  </span>
+                </div>
+              </div>
+              <div class="flex mb-6">
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-blue-600 h-2 rounded-full" style="width: 25%"></div>
+                </div>
+              </div>
+              
+              <div class="flex mb-2 items-center justify-between">
+                <div>
+                  <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200">
+                    Phase 2: Initial Co-Marketing (Months 2-4)
+                  </span>
+                </div>
+              </div>
+              <div class="flex mb-6">
+                <div class="w-1/6 bg-gray-200 h-2"></div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-blue-600 h-2 rounded-full" style="width: 25%"></div>
+                </div>
+              </div>
+              
+              <div class="flex mb-2 items-center justify-between">
+                <div>
+                  <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-teal-600 bg-teal-200">
+                    Phase 3: Individual Participation Facilitation (Months 3-5)
+                  </span>
+                </div>
+              </div>
+              <div class="flex mb-6">
+                <div class="w-2/6 bg-gray-200 h-2"></div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-teal-600 h-2 rounded-full" style="width: 25%"></div>
+                </div>
+              </div>
+              
+              <div class="flex mb-2 items-center justify-between">
+                <div>
+                  <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-teal-600 bg-teal-200">
+                    Phase 4: Branch Standardization (Months 4-6)
+                  </span>
+                </div>
+              </div>
+              <div class="flex mb-6">
+                <div class="w-3/6 bg-gray-200 h-2"></div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-teal-600 h-2 rounded-full" style="width: 25%"></div>
+                </div>
+              </div>
+              
+              <div class="flex mb-2 items-center justify-between">
+                <div>
+                  <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-purple-600 bg-purple-200">
+                    Phase 5: Pilot Joint Events (Months 5-7)
+                  </span>
+                </div>
+              </div>
+              <div class="flex mb-6">
+                <div class="w-4/6 bg-gray-200 h-2"></div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-purple-600 h-2 rounded-full" style="width: 25%"></div>
+                </div>
+              </div>
+              
+              <div class="flex mb-2 items-center justify-between">
+                <div>
+                  <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-green-600 bg-green-200">
+                    Phase 6: Evaluation & Planning (Months 7-9)
+                  </span>
+                </div>
+              </div>
+              <div class="flex mb-2">
+                <div class="w-5/6 bg-gray-200 h-2"></div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-green-600 h-2 rounded-full" style="width: 25%"></div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-gray-700">
+              <div class="bg-blue-50 p-2 rounded">
+                <span class="font-semibold">Phase 1 Key Actions:</span>
+                <ul class="pl-4 list-disc mt-1">
+                  <li>Negotiate NLMC content licensing</li>
+                  <li>Identify target problem sets from Challenge Math Online</li>
+                  <li>Develop integration plan for grades 4-8 curriculum</li>
+                  <li>Create attribution guidelines for licensed content</li>
+                  <li>Train teachers on effective use of NLMC-style problems</li>
+                </ul>
+              </div>
+              <div class="bg-blue-50 p-2 rounded">
+                <span class="font-semibold">Phase 2 Key Actions:</span>
+                <ul class="pl-4 list-disc mt-1">
+                  <li>Develop joint marketing calendar aligned with NLMC cycles</li>
+                  <li>Create email/social campaigns targeting segmented audiences</li>
+                  <li>Implement tracking mechanisms for measuring campaign effectiveness</li>
+                  <li>Design landing pages focusing on RSM's competition preparation programs</li>
+                  <li>Carefully avoid promoting competing programs (e.g., summer offerings)</li>
+                </ul>
+              </div>
+              <div class="bg-teal-50 p-2 rounded">
+                <span class="font-semibold">Phase 3 Key Actions:</span>
+                <ul class="pl-4 list-disc mt-1">
+                  <li>Create parent guides for NLMC individual registration ($29/student)</li>
+                  <li>Develop messaging focusing on benefits and award opportunities</li>
+                  <li>Establish communication channels for registration reminders</li>
+                  <li>Prepare resources to support online test-taking for individuals</li>
+                  <li>Develop plan for celebrating student achievements</li>
+                </ul>
+              </div>
+              <div class="bg-teal-50 p-2 rounded">
+                <span class="font-semibold">Phase 4 Key Actions:</span>
+                <ul class="pl-4 list-disc mt-1">
+                  <li>Draft comprehensive branch participation handbook</li>
+                  <li>Create clear communication about team award ineligibility</li>
+                  <li>Develop templates for promoting individual student success</li>
+                  <li>Train branch coordinators on registration process ($79/team)</li>
+                  <li>Establish protocols for test administration and proctoring</li>
+                </ul>
+              </div>
+              <div class="bg-purple-50 p-2 rounded">
+                <span class="font-semibold">Phase 5 Key Actions:</span>
+                <ul class="pl-4 list-disc mt-1">
+                  <li>Design 1-2 virtual joint events with clearly defined objectives</li>
+                  <li>Focus on topics like "Transitioning to Competition Math"</li>
+                  <li>Execute pilot workshops/webinars with shared presenters</li>
+                  <li>Collect detailed participant feedback on event quality and value</li>
+                  <li>Analyze conversion rates from events to program interest</li>
+                </ul>
+              </div>
+              <div class="bg-green-50 p-2 rounded">
+                <span class="font-semibold">Phase 6 Key Actions:</span>
+                <ul class="pl-4 list-disc mt-1">
+                  <li>Analyze metrics from all initiatives against defined KPIs</li>
+                  <li>Calculate precise ROI on partnership activities</li>
+                  <li>Evaluate partner relationship quality and operational efficiency</li>
+                  <li>Assess impact on conflict areas (IMC participation, summer programs)</li>
+                  <li>Determine next steps based on clear success criteria</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-gray-50 border border-gray-300 p-4 rounded shadow-sm">
+          <h3 class="text-lg font-bold mb-3 text-gray-800 flex items-center">
+            <span class="lucide mr-2" data-lucide="clock"></span>
+            Phased Approach Benefits
+          </h3>
+          <p class="text-gray-700 mb-2">
+            This phased approach allows RSM to engage strategically, capturing benefits while minimizing initial risk and expenditure:
+          </p>
+          <ul class="list-disc pl-5 space-y-1 text-gray-700">
+            <li>Allows for early wins with minimum resource commitment (initial content licensing requires minimal technical integration)</li>
+            <li>Creates natural evaluation points to measure ROI before deeper investment (evaluate content usage before marketing campaigns)</li>
+            <li>Builds relationship gradually while managing stakeholder expectations (clear messaging about team award limitations)</li>
+            <li>Provides flexibility to pivot if certain initiatives underperform (can adjust marketing approach based on initial results)</li>
+            <li>Enables RSM to carefully navigate the team award limitation (focus on individual achievements first)</li>
+            <li>Aligns with industry precedents - tactical partnerships like content sharing and co-marketing are common in the math enrichment space</li>
+            <li>Preserves RSM's control of its brand identity and strategic positioning with respect to its own IMC competition</li>
+          </ul>
+        </div>
+        
+        <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded shadow">
+          <h3 class="font-bold text-lg mb-2">Recommendations Summary</h3>
+          <p class="text-sm">
+            RSM should implement a strategic, phased partnership with NLMC focusing first on content licensing and targeted co-marketing (Phases 1-2), followed by individual participation facilitation and branch standardization (Phases 3-4), and finally pilot joint events (Phase 5). The partnership should prioritize initiatives that leverage NLMC's audience reach (over 40,000 participants) and problem content while minimizing exposure to the team award limitation. 
+            
+            Content licensing offers the strongest synergy potential, with NLMC's Challenge Math Online problems particularly valuable for supplementing RSM's competition preparation tracks. Co-marketing should carefully avoid promoting directly competing programs (especially summer offerings where NLMC's LeapAhead! at $25 differs significantly from RSM's $400-$800+ instructor-led Summer School). 
+            
+            Branch standardization must explicitly address RSM's ineligibility for the Team Achievement Plaque while emphasizing opportunities for individual recognition. A comprehensive evaluation after 7-9 months will determine whether deeper integration is warranted. This approach balances opportunity capture with risk management, aligning with the precedent of tactical rather than strategic alliances in this sector.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Инициализация иконок Lucide
+    lucide.createIcons();
+    
+    // Функция переключения вкладок
+    function changeTab(tabName) {
+      // Скрываем все содержимое вкладок
+      document.getElementById('content-overview').classList.add('hidden');
+      document.getElementById('content-opportunities').classList.add('hidden');
+      document.getElementById('content-swot').classList.add('hidden');
+      document.getElementById('content-recommendations').classList.add('hidden');
+      
+      // Сбрасываем стили всех кнопок вкладок
+      document.getElementById('tab-overview').classList.remove('bg-blue-600', 'text-white');
+      document.getElementById('tab-overview').classList.add('bg-gray-200');
+      document.getElementById('tab-opportunities').classList.remove('bg-blue-600', 'text-white');
+      document.getElementById('tab-opportunities').classList.add('bg-gray-200');
+      document.getElementById('tab-swot').classList.remove('bg-blue-600', 'text-white');
+      document.getElementById('tab-swot').classList.add('bg-gray-200');
+      document.getElementById('tab-recommendations').classList.remove('bg-blue-600', 'text-white');
+      document.getElementById('tab-recommendations').classList.add('bg-gray-200');
+      
+      // Показываем активное содержимое и стилизуем активную кнопку
+      document.getElementById('content-' + tabName).classList.remove('hidden');
+      document.getElementById('tab-' + tabName).classList.remove('bg-gray-200');
+      document.getElementById('tab-' + tabName).classList.add('bg-blue-600', 'text-white');
+    }
+    
+    // Переключение секций приоритетов на вкладке "Opportunities"
+    function togglePriority(priority) {
+      const content = document.getElementById(priority + '-content');
+      const chevron = document.getElementById(priority + '-chevron');
+      const section = document.getElementById(priority + '-section');
+      
+      // Меняем класс содержимого
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        chevron.classList.add('rotate-90');
+        section.classList.remove('border-gray-300');
+        
+        // Добавляем соответствующий цвет для рамки
+        if (priority === 'high1' || priority === 'high2') {
+          section.classList.add('border-red-600', 'bg-red-50');
+        } else if (priority === 'medium1' || priority === 'medium2') {
+          section.classList.add('border-yellow-500', 'bg-yellow-50');
+        } else if (priority === 'low1') {
+          section.classList.add('border-blue-500', 'bg-blue-50');
+        } else if (priority === 'monitor') {
+          section.classList.add('border-gray-500', 'bg-gray-50');
+        }
+      } else {
+        content.classList.add('hidden');
+        chevron.classList.remove('rotate-90');
+        
+        // Удаляем цветовые классы
+        if (priority === 'high1' || priority === 'high2') {
+          section.classList.remove('border-red-600', 'bg-red-50');
+        } else if (priority === 'medium1' || priority === 'medium2') {
+          section.classList.remove('border-yellow-500', 'bg-yellow-50');
+        } else if (priority === 'low1') {
+          section.classList.remove('border-blue-500', 'bg-blue-50');
+        } else if (priority === 'monitor') {
+          section.classList.remove('border-gray-500', 'bg-gray-50');
+        }
+        
+        section.classList.add('border-gray-300', 'bg-white');
+      }
+    }
+    
+    // Переключение секций SWOT на вкладке "SWOT"
+    function toggleSwot(swot) {
+      const content = document.getElementById(swot + '-content');
+      const section = document.getElementById(swot + '-section');
+      
+      // Меняем класс содержимого
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        
+        // Добавляем соответствующий цвет для рамки и фона
+        if (swot === 'strengths') {
+          section.classList.remove('border-green-200', 'bg-white');
+          section.classList.add('border-green-500', 'bg-green-50');
+        } else if (swot === 'weaknesses') {
+          section.classList.remove('border-red-200', 'bg-white');
+          section.classList.add('border-red-500', 'bg-red-50');
+        } else if (swot === 'opportunities') {
+          section.classList.remove('border-blue-200', 'bg-white');
+          section.classList.add('border-blue-500', 'bg-blue-50');
+        } else if (swot === 'threats') {
+          section.classList.remove('border-yellow-200', 'bg-white');
+          section.classList.add('border-yellow-500', 'bg-yellow-50');
+        }
+      } else {
+        content.classList.add('hidden');
+        
+        // Возвращаем исходные классы
+        if (swot === 'strengths') {
+          section.classList.remove('border-green-500', 'bg-green-50');
+          section.classList.add('border-green-200', 'bg-white');
+        } else if (swot === 'weaknesses') {
+          section.classList.remove('border-red-500', 'bg-red-50');
+          section.classList.add('border-red-200', 'bg-white');
+        } else if (swot === 'opportunities') {
+          section.classList.remove('border-blue-500', 'bg-blue-50');
+          section.classList.add('border-blue-200', 'bg-white');
+        } else if (swot === 'threats') {
+          section.classList.remove('border-yellow-500', 'bg-yellow-50');
+          section.classList.add('border-yellow-200', 'bg-white');
+        }
+      }
+    }
+  </script>
+</body>
+</html>
